@@ -1,0 +1,254 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNjytyn1GkcpeB4zZ9317Ec",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Maria-ui-sudo/Maria-ui-sudo/blob/main/Pipeline%20structuring\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Pipeline structuring\n",
+        "ML Pipeline"
+      ],
+      "metadata": {
+        "id": "GQvodzdI39fm"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from sklearn.pipeline import Pipeline\n",
+        "from sklearn.preprocessing import StandardScaler\n",
+        "from sklearn.linear_model import LinearRegression\n",
+        "\n",
+        "pipeline = Pipeline([('scaler', StandardScaler()), ('model', LinearRegression())])\n",
+        "pipeline.fit(X_train, y_train)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 366
+        },
+        "id": "vhv3mtNY54Ll",
+        "outputId": "a73f09f9-2b2b-490d-c177-da9887cb5c7e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "ModuleNotFoundError",
+          "evalue": "No module named 'sklearn.piperline'",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mModuleNotFoundError\u001b[0m                       Traceback (most recent call last)",
+            "\u001b[0;32m/tmp/ipython-input-1797407348.py\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0;32mfrom\u001b[0m \u001b[0msklearn\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mpiperline\u001b[0m \u001b[0;32mimport\u001b[0m \u001b[0mPipeline\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      2\u001b[0m \u001b[0;32mfrom\u001b[0m \u001b[0msklearn\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mpreprocessing\u001b[0m \u001b[0;32mimport\u001b[0m \u001b[0mStandardScaler\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[0mpipeline\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mPipeline\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m'scaler'\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0mStandardScaler\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m'model'\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0mLinearRegression\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      4\u001b[0m \u001b[0mpipeline\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mfix\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mX_train\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0my_train\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mModuleNotFoundError\u001b[0m: No module named 'sklearn.piperline'",
+            "",
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0;32m\nNOTE: If your import is failing due to a missing package, you can\nmanually install dependencies using either !pip or !apt.\n\nTo view examples of installing some common dependencies, click the\n\"Open Examples\" button below.\n\u001b[0;31m---------------------------------------------------------------------------\u001b[0m\n"
+          ],
+          "errorDetails": {
+            "actions": [
+              {
+                "action": "open_url",
+                "actionText": "Open Examples",
+                "url": "/notebooks/snippets/importing_libraries.ipynb"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!pip install matplotlib-venn\n",
+        "!apt-get -qq install -y libfluidsynth1"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "RgTq71nN6Xht",
+        "outputId": "77b7a483-019b-473c-db15-d8018832a5a3"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Requirement already satisfied: matplotlib-venn in /usr/local/lib/python3.12/dist-packages (1.1.2)\n",
+            "Requirement already satisfied: matplotlib in /usr/local/lib/python3.12/dist-packages (from matplotlib-venn) (3.10.0)\n",
+            "Requirement already satisfied: numpy in /usr/local/lib/python3.12/dist-packages (from matplotlib-venn) (2.0.2)\n",
+            "Requirement already satisfied: scipy in /usr/local/lib/python3.12/dist-packages (from matplotlib-venn) (1.16.3)\n",
+            "Requirement already satisfied: contourpy>=1.0.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib->matplotlib-venn) (1.3.3)\n",
+            "Requirement already satisfied: cycler>=0.10 in /usr/local/lib/python3.12/dist-packages (from matplotlib->matplotlib-venn) (0.12.1)\n",
+            "Requirement already satisfied: fonttools>=4.22.0 in /usr/local/lib/python3.12/dist-packages (from matplotlib->matplotlib-venn) (4.61.1)\n",
+            "Requirement already satisfied: kiwisolver>=1.3.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib->matplotlib-venn) (1.4.9)\n",
+            "Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.12/dist-packages (from matplotlib->matplotlib-venn) (25.0)\n",
+            "Requirement already satisfied: pillow>=8 in /usr/local/lib/python3.12/dist-packages (from matplotlib->matplotlib-venn) (11.3.0)\n",
+            "Requirement already satisfied: pyparsing>=2.3.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib->matplotlib-venn) (3.2.5)\n",
+            "Requirement already satisfied: python-dateutil>=2.7 in /usr/local/lib/python3.12/dist-packages (from matplotlib->matplotlib-venn) (2.9.0.post0)\n",
+            "Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.12/dist-packages (from python-dateutil>=2.7->matplotlib->matplotlib-venn) (1.17.0)\n",
+            "E: Package 'libfluidsynth1' has no installation candidate\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!apt-get -qq install -y libarchive-dev && pip install -U libarchive\n",
+        "import libarchive"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tMVqF4Ke792c",
+        "outputId": "59c65114-59cc-45a8-9113-12b188e72438"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Selecting previously unselected package libarchive-dev:amd64.\n",
+            "(Reading database ... 117528 files and directories currently installed.)\n",
+            "Preparing to unpack .../libarchive-dev_3.6.0-1ubuntu1.5_amd64.deb ...\n",
+            "Unpacking libarchive-dev:amd64 (3.6.0-1ubuntu1.5) ...\n",
+            "Setting up libarchive-dev:amd64 (3.6.0-1ubuntu1.5) ...\n",
+            "Processing triggers for man-db (2.10.2-1) ...\n",
+            "Collecting libarchive\n",
+            "  Downloading libarchive-0.4.7.tar.gz (23 kB)\n",
+            "  Preparing metadata (setup.py) ... \u001b[?25l\u001b[?25hdone\n",
+            "Collecting nose (from libarchive)\n",
+            "  Downloading nose-1.3.7-py3-none-any.whl.metadata (1.7 kB)\n",
+            "Downloading nose-1.3.7-py3-none-any.whl (154 kB)\n",
+            "\u001b[2K   \u001b[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m154.7/154.7 kB\u001b[0m \u001b[31m11.3 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m\n",
+            "\u001b[?25hBuilding wheels for collected packages: libarchive\n",
+            "  Building wheel for libarchive (setup.py) ... \u001b[?25l\u001b[?25hdone\n",
+            "  Created wheel for libarchive: filename=libarchive-0.4.7-py3-none-any.whl size=31629 sha256=6604a6846679ff53246dd68748cfa61f72c8c9d7d77d5d578cefaf748b0bd144\n",
+            "  Stored in directory: /root/.cache/pip/wheels/29/20/ab/f101da7b245b996aa097685ef742243725ea6150f5b3b6d9ed\n",
+            "Successfully built libarchive\n",
+            "Installing collected packages: nose, libarchive\n",
+            "Successfully installed libarchive-0.4.7 nose-1.3.7\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!apt-get -qq install -y graphviz && pip install pydot\n",
+        "import pydot"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "CrTlOp2U8Ity",
+        "outputId": "1f644a0f-cfdc-4e63-f7a6-e270364188da"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Requirement already satisfied: pydot in /usr/local/lib/python3.12/dist-packages (4.0.1)\n",
+            "Requirement already satisfied: pyparsing>=3.1.0 in /usr/local/lib/python3.12/dist-packages (from pydot) (3.2.5)\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!pip install cartopy\n",
+        "import cartopy\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-Okt4dnq8QY-",
+        "outputId": "d3a4f8f0-d8f3-424e-8ff2-9b034834feb4"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Collecting cartopy\n",
+            "  Downloading cartopy-0.25.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (6.1 kB)\n",
+            "Requirement already satisfied: numpy>=1.23 in /usr/local/lib/python3.12/dist-packages (from cartopy) (2.0.2)\n",
+            "Requirement already satisfied: matplotlib>=3.6 in /usr/local/lib/python3.12/dist-packages (from cartopy) (3.10.0)\n",
+            "Requirement already satisfied: shapely>=2.0 in /usr/local/lib/python3.12/dist-packages (from cartopy) (2.1.2)\n",
+            "Requirement already satisfied: packaging>=21 in /usr/local/lib/python3.12/dist-packages (from cartopy) (25.0)\n",
+            "Requirement already satisfied: pyshp>=2.3 in /usr/local/lib/python3.12/dist-packages (from cartopy) (3.0.3)\n",
+            "Requirement already satisfied: pyproj>=3.3.1 in /usr/local/lib/python3.12/dist-packages (from cartopy) (3.7.2)\n",
+            "Requirement already satisfied: contourpy>=1.0.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib>=3.6->cartopy) (1.3.3)\n",
+            "Requirement already satisfied: cycler>=0.10 in /usr/local/lib/python3.12/dist-packages (from matplotlib>=3.6->cartopy) (0.12.1)\n",
+            "Requirement already satisfied: fonttools>=4.22.0 in /usr/local/lib/python3.12/dist-packages (from matplotlib>=3.6->cartopy) (4.61.1)\n",
+            "Requirement already satisfied: kiwisolver>=1.3.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib>=3.6->cartopy) (1.4.9)\n",
+            "Requirement already satisfied: pillow>=8 in /usr/local/lib/python3.12/dist-packages (from matplotlib>=3.6->cartopy) (11.3.0)\n",
+            "Requirement already satisfied: pyparsing>=2.3.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib>=3.6->cartopy) (3.2.5)\n",
+            "Requirement already satisfied: python-dateutil>=2.7 in /usr/local/lib/python3.12/dist-packages (from matplotlib>=3.6->cartopy) (2.9.0.post0)\n",
+            "Requirement already satisfied: certifi in /usr/local/lib/python3.12/dist-packages (from pyproj>=3.3.1->cartopy) (2025.11.12)\n",
+            "Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.12/dist-packages (from python-dateutil>=2.7->matplotlib>=3.6->cartopy) (1.17.0)\n",
+            "Downloading cartopy-0.25.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (11.8 MB)\n",
+            "\u001b[2K   \u001b[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m11.8/11.8 MB\u001b[0m \u001b[31m81.8 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m\n",
+            "\u001b[?25hInstalling collected packages: cartopy\n",
+            "Successfully installed cartopy-0.25.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from sklearn.pipeline import Pipeline\n",
+        "from sklearn.preprocessing import StandardScaler\n",
+        "from sklearn.linear_model import LinearRegression\n",
+        "\n",
+        "pipeline = Pipeline([\n",
+        "    ('scaler', StandardScaler()),\n",
+        "    ('model', LinearRegression())\n",
+        "])\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "zu1kiDLU9cNC"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
